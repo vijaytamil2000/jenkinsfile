@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Vijay's DevOps Lab</title>
+    <title>My DevOps Lab</title>
 
     <link href="jumbotron.css" rel="stylesheet">
 </head>
@@ -24,7 +24,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Vijay's DevOps AWS Lab</a>
+            <a class="navbar-brand" href="#">My DevOps Lab</a>
         </div>
         <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form">
@@ -44,7 +44,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello</h1>
-        <p>Welcome to Devopshome</p>
+        <p>Welcome to My Devops</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
         <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p>
     </div>
@@ -63,7 +63,7 @@
     <hr>
 
     <footer>
-        <p>&copy; Vijay DevOps lab</p>
+        <p>&copy; My DevOps lab</p>
     </footer>
 </div> <!-- /container -->
 

@@ -75,23 +75,25 @@ pipeline{
                 }
         }
 
-        stage ('Download artificat') {
-
-            steps {
-                echo "deploy into tomcat folder"
-                sh 'scp -rp -i /var/lib/jenkins/.ssh/id_rsa.pub /var/lib/jenkins/workspace/MyPipeline/target/vijayDevOpsLab-0.0.9.war root@192.168.99.103:/usr/share/tomcat/webapps/'
-
-                }
+        stage('Copy requiredfile to deployment'){
+         
+         steps {
+             
+         
+        sshagent(['j77d541ef-27b1-4cf4-8bcb-bd2e494b70c0']){
+            sh "coying war files to remote server"
+            sh "scp -r /var/lib/jenkins/workspace/MyPipeline/target/vijayDevOpsLab-0.0.9.war root@192.168.99.103:/usr/share/tomcat/webapps/"
+			sh "sleep 5"
+			sh "systemctl restart tomcat"
+            sh "deployment completed"
         }
-
-        stage ('install artificat') {
-            steps {
-                sleep(time:5,unit:"SECONDS") 
-                sh 'systemctl restart tomcat'
-                }
-            }
-
         }
+    
+     }
+
+        
+
+    }
 }
 
         

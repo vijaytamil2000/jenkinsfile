@@ -75,7 +75,7 @@ pipeline{
                 }
         }
 
-        stage('Copy requiredfile to deployment'){
+        stage('Copy war from artificat to tomcat'){
          
          steps {
              

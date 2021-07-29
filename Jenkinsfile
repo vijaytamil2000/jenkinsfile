@@ -70,7 +70,7 @@ pipeline{
         stage ('Deploy') {
             steps {
                 echo 'Download artifact '
-                sh 'wget --user=admin --password=Veeresh1234 http://152.67.4.115:8081/repository/vijaydeveops-SNAPSHOT/com/vijaydevopslab/vijayDevOpsLab/0.0.9-SNAPSHOT/vijayDevOpsLab-0.0.9.war'
+                sh 'wget --user=admin --password=Veeresh1234 http://152.67.4.115:8081/repository/VijayDevops-RELEASE/com/vijaydevopslab/vijayDevOpsLab/0.0.9/vijayDevOpsLab-0.0.9.war '
                 
                 }
         }

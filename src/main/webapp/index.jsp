@@ -8,17 +8,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Vinay's DevOps Lab</title>
+    <title>Vijay's DevOps Lab</title>
 
-
-    <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
@@ -32,7 +24,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Vinay's DevOps AWS Lab</a>
+            <a class="navbar-brand" href="#">Vijay's DevOps AWS Lab</a>
         </div>
         <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form">
@@ -52,7 +44,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello</h1>
-        <p>This is Vinays DevOps AWS Lab</p>
+        <p>Welcome to Devopshome</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
         <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p>
     </div>
@@ -63,35 +55,15 @@
     <div class="row">
         <div class="col-md-4">
             <h2>Git,Maven and GitHub</h2>
-            <p>I have used Git for version controlling. Maven as a build tool. I have used GitHub as my source code repository </p>
+            <p>The Git Jenkins page </p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Nexus</h2>
-            <p>I have used Nexus3 as my maven repository manager. Jenkins will publish the artifacts to Nexus after succesful build </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Jenkins</h2>
-            <p>I have used Jenkins as my continuous integration tool. I used both simple piplelines and declarative pipelines for the automation </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Ansible</h2>
-            <p>I have used Ansible as my deployment tool. Wrote couple of playbooks using roles and with out roles</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Terraform</h2>
-            <p>I have used Terraform as my IaC tool. Wrote couple of terraform files to create the EC2 instance which is hosting tomcat server</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
+        </div>  
     </div>
 
     <hr>
 
     <footer>
-        <p>&copy; vinay's devops lab 2020-2021</p>
+        <p>&copy; Vijay DevOps lab</p>
     </footer>
 </div> <!-- /container -->
 

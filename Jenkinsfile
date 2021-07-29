@@ -79,7 +79,7 @@ pipeline{
 
             steps {
                 echo "deploy into tomcat folder"
-                sh 'scp /var/lib/jenkins/workspace/MyPipeline/target/vijayDevOpsLab-0.0.9.war root@192.168.99.103:/usr/share/tomcat/webapps/'
+                sh 'scp -oStrictHostKeyChecking=no /var/lib/jenkins/workspace/MyPipeline/target/vijayDevOpsLab-0.0.9.war root@192.168.99.103:/usr/share/tomcat/webapps/'
 
                 }
         }

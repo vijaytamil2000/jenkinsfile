@@ -5,6 +5,13 @@ pipeline{
         maven 'maven'
     }
 
+    environment{
+       ArtifactId = readMavenPom().getArtifactId()
+       Version = readMavenPom().getVersion()
+       Name = readMavenPom().getName()
+       GroupId = readMavenPom().getGroupId()
+    }
+
     stages {
         // Specify various stage with in stages
 
@@ -27,7 +34,22 @@ pipeline{
 
         stage ('Publish artificat'){
             steps {
-                nexusArtifactUploader artifacts: [[artifactId: 'vijayDevOpsLab', classifier: '', file: 'target/vijayDevOpsLab-0.0.9-SNAPSHOT.war', type: 'war']], credentialsId: 'cb81ea82-5fec-4e81-ac91-8bdea4b8b0ba', groupId: 'com.vijaydevopslab', nexusUrl: '152.67.4.115:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'vijaydeveops-SNAPSHOT', version: '0.0.9-SNAPSHOT'
+                script {
+                def NexusRepo = Version.endsWith("SNAPSHOT") ? "vijaydeveops-SNAPSHOT" : "VijayDevops-RELEASE"
+
+                nexusArtifactUploader artifacts: 
+                [[artifactId: "${ArtifactId}", 
+                classifier: '', 
+                file: "target/${ArtifactId}-${Version}.war", 
+                type: 'war']], 
+                credentialsId: 'cb81ea82-5fec-4e81-ac91-8bdea4b8b0ba', 
+                groupId: "${GroupId}", 
+                nexusUrl: '152.67.4.115:8081', 
+                nexusVersion: 'nexus3', 
+                protocol: 'http', 
+                repository: "${NexusRepo}", 
+                version: "${Version}"
+            }
             }
         }
 
@@ -36,7 +58,7 @@ pipeline{
         stage ('Deploy') {
             steps {
                 echo 'Download artifact '
-                sh 'wget --user=admin --password=Veeresh0987# http://152.67.4.115:8081/repository/vijaydeveops-SNAPSHOT/com/vijaydevopslab/vijayDevOpsLab/0.0.9-SNAPSHOT/vijayDevOpsLab-0.0.9-*-4.war'
+                sh 'wget --user=admin --password=Veeresh1234 http://152.67.4.115:8081/repository/vijaydeveops-SNAPSHOT/com/vijaydevopslab/vijayDevOpsLab/0.0.9-SNAPSHOT/vijayDevOpsLab-0.0.9.war'
                 
                 }
         }
@@ -45,7 +67,7 @@ pipeline{
 
             steps {
                 echo "deploy into tomcat folder"
-                sh 'cp target/vijayDevOpsLab-0.0.9-*-4.war /usr/share/tomcat/webapps/vijayDevOpsLab-0.0.9-*-4.war'
+                sh 'cp target/vijayDevOpsLab-0.0.9.war /usr/share/tomcat/webapps/vijayDevOpsLab-0.0.9.war'
 
                 }
         }

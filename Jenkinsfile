@@ -84,6 +84,7 @@ pipeline{
             sh "scp -r /var/lib/jenkins/workspace/MyPipeline/target/vijayDevOpsLab-0.0.9.war root@192.168.99.103:/usr/share/tomcat/webapps/"
 			sh "sleep 5"
         }
+        
         }
     
      }

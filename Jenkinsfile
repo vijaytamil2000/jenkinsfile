@@ -69,7 +69,6 @@ pipeline{
         // Stage5 : Publish the source code to Sonarqube
         stage ('Deploy') {
             steps {
-				sh 'rm -rf /var/lib/jenkins/workspace/Build_and_deploy_war_file_Pipeline/target/*.war"
                 echo 'Download artifact '
                 sh 'wget --user=admin --password=Veeresh1234 http://152.67.4.115:8081/repository/VijayDevops-RELEASE/com/vijaydevopslab/vijayDevOpsLab/0.0.9/vijayDevOpsLab-0.0.9.war '
                 

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>My DevOps Lab     </title>
+    <title>My DevOps Lab    </title>
 
     <link href="jumbotron.css" rel="stylesheet">
 </head>

@@ -35,9 +35,22 @@ pipeline{
         // Stage3 : Publish the source code to Sonarqube
         stage ('Deploy'){
             steps {
-                echo ' Deploy'
+                echo 'Download artifact '
+                sh 'wget --user=admin --password=Veeresh0987# http://152.67.4.115:8081/repository/vijaydeveops-SNAPSHOT/com/vijaydevopslab/vijayDevOpsLab/0.0.9-SNAPSHOT/vijayDevOpsLab-0.0.9-*-4.war'
                 
                 }
+
+            steps {
+                echo "deploy into tomcat folder"
+                sh 'cp target/vijayDevOpsLab-0.0.9-*-4.war /usr/share/tomcat/webapps/vijayDevOpsLab-0.0.9-*-4.war'
+
+            }
+
+            steps {
+                sleep(time:5,unit:"SECONDS") 
+                sh 'systemctl restart tomcat'
+                }
+            }
 
             }
         }

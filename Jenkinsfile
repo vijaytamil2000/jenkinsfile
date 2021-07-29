@@ -69,6 +69,7 @@ pipeline{
         // Stage5 : Publish the source code to Sonarqube
         stage ('Deploy') {
             steps {
+				sh 'rm -rf /var/lib/jenkins/workspace/Build_and_deploy_war_file_Pipeline/target/*.war"
                 echo 'Download artifact '
                 sh 'wget --user=admin --password=Veeresh1234 http://152.67.4.115:8081/repository/VijayDevops-RELEASE/com/vijaydevopslab/vijayDevOpsLab/0.0.9/vijayDevOpsLab-0.0.9.war '
                 
@@ -81,7 +82,7 @@ pipeline{
              
          
         sshagent(['j77d541ef-27b1-4cf4-8bcb-bd2e494b70c0']){
-            sh "scp -r /var/lib/jenkins/workspace/MyPipeline/target/vijayDevOpsLab-0.0.9.war root@192.168.99.103:/usr/share/tomcat/webapps/"
+            sh "scp -r /var/lib/jenkins/workspace/Build_and_deploy_war_file_Pipeline/target/vijayDevOpsLab-0.0.9.war root@192.168.99.103:/usr/share/tomcat/webapps/"
 			sh "sleep 5"
         }
         

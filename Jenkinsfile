@@ -32,7 +32,7 @@ pipeline{
 
 
         
-        // Stage 4 : Print some information
+        // Stage 3 : Print some information
         stage ('Print Environment variables'){
                     steps {
                         echo "Artifact ID is '${ArtifactId}'"
@@ -42,7 +42,7 @@ pipeline{
                     }
                 }
 
-        // Stage 3": Upload artifiact
+        // Stage 4": Upload artifiact
 
         stage ('Publish artificat'){
             steps {
@@ -66,7 +66,7 @@ pipeline{
         }
 
 
-        // Stage3 : Publish the source code to Sonarqube
+        // Stage5 : Publish the source code to Sonarqube
         stage ('Deploy') {
             steps {
                 echo 'Download artifact '
